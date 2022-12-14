@@ -16,7 +16,7 @@ function CameraController(props) {
     const { x } = state.mouse
 
     if (!!orbitControlsRef.current) {
-      state.camera.position.lerp({ x: props.zoom ? 0 : 350, y: props.zoom ? 0 : 250, z: props.zoom ? 420 : 20 }, 0.02)
+      state.camera.position.lerp({ x: props.zoom ? 0 : 350, y: props.zoom ? 0 : 250, z: props.zoom ? 470 : 20 }, 0.02)
 
       // if (props.zoom === true) {
       //   orbitControlsRef.current.setAzimuthalAngle(-x * angleToRadians(10))
@@ -31,7 +31,7 @@ function CameraController(props) {
 
   return (
     // <>
-    <OrbitControls ref={orbitControlsRef} enableRotate={false} />
+    <OrbitControls ref={orbitControlsRef} enableRotate={false} enableZoom={false} />
     //   {/* <FrameLimiter /> */}
     // </>
 

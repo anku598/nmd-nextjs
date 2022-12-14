@@ -374,17 +374,17 @@ export default function Home() {
             <Canvas dpr={[1, 2]} style={{ width: width, height: height }}
               shadows className='fadeIn' camera={{ fov: 35 }} gl={{ antialias: true }}>
               <color args={["#fff"]} attach="background" />
-
               <Lights />
               <Suspense fallback={null}>
                 <group position={[0, 0, 0]} scale={5}>
                   <VideoText position={[0, 10, -1]} rotation={[0, zoom ? 0 : -1000, 0]} />
                 </group>
 
-                <PresentationControls zoom={0.8} global cursor={false} speed={4} azimuth={[-Math.PI / 2, Math.PI / 2]} polar={[0, 0]} rotation={[0.13, 0.1, 0]} config={{ mass: 3, tension: 80, friction: 26 }}>
+                <PresentationControls global cursor={false} speed={4} azimuth={[-Math.PI / 2, Math.PI / 2]} polar={[0, 0]} rotation={[0.13, 0.1, 0]} config={{ mass: 3, tension: 80, friction: 26 }}>
 
 
                   <Stage adjustCamera={false} contactShadow={{ opacity: 0.2 }} makeDefault shadows="accumulative" preset="portrait" environment="city" intensity={2} >
+
                     <Model name="P_1" onClick={(e) => (e.stopPropagation(), showSidebar('P_1'))} position={[3.2, 85.5, 17.4]} onPointerEnter={(e) => {
                       e.stopPropagation();
                       setHoveredp1(true);
@@ -480,7 +480,6 @@ export default function Home() {
                         handleHoverOut()
                       }} > <animated.meshStandardMaterial {...materialProps} color={hoverColorp7.color} />
                     </Model>
-
                   </Stage>
 
                 </PresentationControls>
