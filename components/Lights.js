@@ -1,4 +1,5 @@
 import React from 'react'
+import { angleToRadians } from './../utills/angle';
 
 
 export default function Lights() {

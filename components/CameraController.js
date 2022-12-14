@@ -24,21 +24,17 @@ function CameraController(props) {
       // }
       state.camera.lookAt(0, 0, 0)
     }
-
-
-
-
-
-
   })
 
 
 
+
   return (
-    <>
-      <OrbitControls ref={orbitControlsRef} enableRotate={false} />
-      {/* <FrameLimiter /> */}
-    </>
+    // <>
+    <OrbitControls ref={orbitControlsRef} enableRotate={false} />
+    //   {/* <FrameLimiter /> */}
+    // </>
+
   )
 }
 
